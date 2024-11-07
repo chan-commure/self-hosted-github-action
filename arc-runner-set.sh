@@ -1,6 +1,5 @@
 INSTALLATION_NAME="arc-runner-set"
 NAMESPACE="arc-runners"
-GITHUB_CONFIG_URL="https://github.com/chan-commure/self-hosted-github-action"
 helm install "${INSTALLATION_NAME}" \
     --namespace "${NAMESPACE}" \
     --create-namespace \
