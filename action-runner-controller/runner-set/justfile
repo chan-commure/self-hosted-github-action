@@ -7,7 +7,7 @@ github_token := env_var_or_default("ARC_RUNNER_GITHUB_TOKEN", "")
 github_config_url := "https://github.com/getathelas/normandy"
 
 @install *args='':
-    helm install {{installation_name}} \
+    helm upgrade {{installation_name}} \
     --namespace {{namespace}} \
     --create-namespace \
     --set githubConfigUrl={{github_config_url}} \

@@ -7,8 +7,8 @@ template:
       - name: runner
         resources:
           limits:
-            cpu: 16
-            memory: 32Gi
-          requests:
             cpu: 48
             memory: 196Gi
+          requests:
+            cpu: 16
+            memory: 32Gi
