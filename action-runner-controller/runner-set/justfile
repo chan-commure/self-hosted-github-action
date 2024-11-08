@@ -6,7 +6,7 @@ namespace := "arc-runners"
 github_token := env_var_or_default("ARC_RUNNER_GITHUB_TOKEN", "")
 github_config_url := "https://github.com/getathelas/normandy"
 
-@install *args='':
+@upgrade *args='':
     helm upgrade {{installation_name}} \
     --namespace {{namespace}} \
     --create-namespace \
