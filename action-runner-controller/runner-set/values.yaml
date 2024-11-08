@@ -18,3 +18,5 @@ template:
 
 # for easier debugging.
 minRunners: 1
+
+runnerGroup: large
