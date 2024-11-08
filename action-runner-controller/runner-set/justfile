@@ -1,0 +1,10 @@
+installation_name := "arc-runner-set"
+namespace := "arc-runners"
+
+install:
+    helm install {{installation_name}} \
+    --namespace {{namespace}} \
+    --create-namespace \
+    --dry-run \
+    --values values.yaml \
+    oci://ghcr.io/actions/actions-runner-controller-charts/gha-runner-scale-set

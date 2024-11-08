@@ -1,0 +1,8 @@
+controllerServiceAccount:
+  name: {{ .Values.installationName }} 
+  namespace: {{ .Values.namespace }}
+containerMode:
+  type: dind
+githubConfigUrl: {{ .Values.githubConfigUrl }}
+githubConfigSecret:
+  github_token: {{ .Values.githubPat }}
