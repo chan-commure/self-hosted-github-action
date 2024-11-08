@@ -1,10 +1,16 @@
+set positional-arguments
+
 installation_name := "arc-runner-set"
 namespace := "arc-runners"
 
-install:
+github_token := env_var_or_default("ARC_RUNNER_GITHUB_TOKEN", "")
+github_config_url := "https://github.com/getathelas/normandy"
+
+@install *args='':
     helm install {{installation_name}} \
     --namespace {{namespace}} \
     --create-namespace \
-    --dry-run \
+    --set githubConfigUrl={{github_config_url}} \
+    --set githubConfigSecret.github_token={{github_token}} \
     --values values.yaml \
-    oci://ghcr.io/actions/actions-runner-controller-charts/gha-runner-scale-set
+    oci://ghcr.io/actions/actions-runner-controller-charts/gha-runner-scale-set $@

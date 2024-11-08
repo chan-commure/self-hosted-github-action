@@ -1,11 +1,17 @@
 controllerServiceAccount:
-  name: asdf
-  namespace: asdf
+  name: arc-runner-set
+  namespace: arc-runners
 containerMode:
   type: dind
-githubConfigUrl: asdf
-githubConfigSecret:
-  github_token: asdf
-controllerServiceAccount:
-  name: asdf
-  namespace: asdf
+
+template:
+  spec:
+    containers:
+      - name: runner
+        resources:
+          limits:
+            cpu: 16
+            memory: 32Gi
+          requests:
+            cpu: 48
+            memory: 196Gi
