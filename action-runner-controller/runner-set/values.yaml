@@ -6,9 +6,15 @@ template:
     containers:
       - name: runner
         resources:
-          limits:
-            cpu: 48
-            memory: 196Gi
+#           limits:
+#             cpu: 48
+#             memory: 196Gi
+#           requests:
+#             cpu: 16
+#             memory: 32Gi
           requests:
-            cpu: 16
-            memory: 32Gi
+            cpu: 4
+            memory: 16Gi
+
+# for easier debugging.
+minRunners: 1
