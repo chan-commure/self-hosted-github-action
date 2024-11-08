@@ -1,6 +1,3 @@
-controllerServiceAccount:
-  name: arc-runner-set
-  namespace: arc-runners
 containerMode:
   type: dind
 
