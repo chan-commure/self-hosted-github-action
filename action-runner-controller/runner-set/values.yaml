@@ -1,8 +1,11 @@
 controllerServiceAccount:
-  name: {{ .Values.installationName }} 
-  namespace: {{ .Values.namespace }}
+  name: asdf
+  namespace: asdf
 containerMode:
   type: dind
-githubConfigUrl: {{ .Values.githubConfigUrl }}
+githubConfigUrl: asdf
 githubConfigSecret:
-  github_token: {{ .Values.githubPat }}
+  github_token: asdf
+controllerServiceAccount:
+  name: asdf
+  namespace: asdf
