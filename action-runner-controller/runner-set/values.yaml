@@ -1,22 +1,22 @@
 containerMode:
   type: dind
 
-template:
-  spec:
-    containers:
-      - name: runner
-        resources:
+# template:
+#   spec:
+#     containers:
+#       - name: runner
+#         resources:
 #           limits:
 #             cpu: 48
 #             memory: 196Gi
 #           requests:
 #             cpu: 16
 #             memory: 32Gi
-          requests:
-            cpu: 4
-            memory: 16Gi
+#           # requests:
+#           #   cpu: 4
+#           #   memory: 16Gi
 
 # for easier debugging.
-minRunners: 1
+# minRunners: 1
 
-runnerGroup: large
+# runnerGroup: large
